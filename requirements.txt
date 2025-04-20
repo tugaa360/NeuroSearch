@@ -1,0 +1,9 @@
+gradio
+aiohttp
+spacy
+torch
+transformers
+langdetect
+python-dotenv
+cachetools
+scikit-learn
