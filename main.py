@@ -312,7 +312,8 @@ with gr.Blocks() as iface:
     gr.Markdown("# 高速・高精度 マルチAI＆検索ハイブリッドシステム (オープンソース公開版)")
     gr.Markdown("Google + Bing + X Post + FAQ応答を高性能AIで統合し、多様性と情報源の透明性を意識して表示")
     query_input = gr.Textbox(lines=2, placeholder="例: オープンソースAIの最新動向は？")
-    with gr.Row():search_engine_checkboxes = gr.CheckboxGroup(["google", "bing", "x"], label="検索エンジン (オプション)", value=DEFAULT_SEARCH_ENGINES)
+    with gr.Row():
+        search_engine_checkboxes = gr.CheckboxGroup(["google", "bing", "x"], label="検索エンジン (オプション)", value=DEFAULT_SEARCH_ENGINES)
         num_results_slider = gr.Slider(minimum=1, maximum=10, step=1, value=3, label="検索結果数 (オプション)")
     with gr.Accordion("詳細設定 (オプション)", open=False):
         summary_model_dropdown = gr.Dropdown([DEFAULT_SUMMARY_MODEL, "facebook/bart-large-cnn", "google/pegasus-large"], label="要約モデル", value=DEFAULT_SUMMARY_MODEL)
